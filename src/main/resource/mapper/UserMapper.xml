@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="blog.mapper.UserMapper">
+    <insert id="insert" parameterType="blog.dao.User">
+        	insert into b_user (name, password,
+		level, des, tel, address
+		)
+		values (#{name,jdbcType=VARCHAR},
+		#{password,jdbcType=VARCHAR},
+		#{level,jdbcType=INTEGER}, #{des,jdbcType=VARCHAR}, #{tel,jdbcType=VARCHAR},
+		#{address,jdbcType=VARCHAR}
+		)
+    </insert>
+</mapper>
